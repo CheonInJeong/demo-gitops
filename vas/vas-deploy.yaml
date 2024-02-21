@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: vas
-          image: ijcheon/vas
+          image: ijcheon/vas:0.0.1
           ports:
           - name: http
             containerPort: 8080
