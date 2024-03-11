@@ -4,28 +4,28 @@ metadata:
   name: simple-deploy
   namespace: argocd    
   labels:
-    app: simpleApp
+    app: simple-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: simpleApp
+      app: simple-app
   template:
     metadata:
       labels:
-        app: simpleApp     
+        app: simple-app     
     spec:
       containers:
-        - name: simpleApp
+        - name: simple-app
           image: ijcheon/simple_app:0.0.2
           ports:
           - name: http
             containerPort: 8080
-         volumeMounts:
-         - name: properties
-           mountPath: /app/properties
-    volumes:
-    -name: properties
-     hostPath:
-      path: /Users/chenchen/Desktop/dev/simpleApp
-      type: DirectoryOrCreate
+          volumeMounts:
+          - name: properties
+            mountPath: /app/properties
+      volumes:
+       - name: properties
+         hostPath:
+          path: /Users/chenchen/Desktop/dev/simpleApp
+          type: DirectoryOrCreate
