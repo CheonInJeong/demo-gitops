@@ -14,8 +14,6 @@ spec:
     metadata:
       labels:
         app: simpleApp     
-      
-
     spec:
       containers:
         - name: simpleApp
@@ -23,3 +21,11 @@ spec:
           ports:
           - name: http
             containerPort: 8080
+         volumeMounts:
+         - name: properties
+           mountPath: /app/properties
+    volumes:
+    -name: properties
+     hostPath:
+      path: /Users/chenchen/Desktop/dev/simpleApp
+      type: DirectoryOrCreate
