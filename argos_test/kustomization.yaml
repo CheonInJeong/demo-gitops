@@ -6,4 +6,4 @@ resources:
 - simple-ing.yaml
 images:
 - name: ijcheon/simple_app
-  newTag: 0.2
+  newTag: '0.2'
