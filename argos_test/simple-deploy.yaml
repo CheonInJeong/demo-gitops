@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: simple-app
-          image: ijcheon/simple_app:0.0.2
+          image: ijcheon/simple_app:0.2
           ports:
           - name: http
             containerPort: 8080
