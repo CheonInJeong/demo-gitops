@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-deploy
+  namespace: argocd    
+  labels:
+    app: simpleApp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simpleApp
+  template:
+    metadata:
+      labels:
+        app: simpleApp     
+      
+
+    spec:
+      containers:
+        - name: simpleApp
+          image: ijcheon/simple_app:0.0.2
+          ports:
+          - name: http
+            containerPort: 8080
