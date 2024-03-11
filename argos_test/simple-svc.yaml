@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
 spec:
   selector:
-    app: simplApp
+    app: simpl-app
   
   ports:
   - protocol: TCP
