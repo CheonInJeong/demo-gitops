@@ -6,4 +6,4 @@ resources:
 - simple-ing.yaml
 images:
 - name: ijcheon/simple_app
-  newTag: 0.2 #버전만 바꿔주면 yaml 파일의 버전을 알아서 업데이트한다.
+  newTag: 0.2
